@@ -1,0 +1,12 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "npm run start"
+
+[build.env]
+NODE_VERSION = "18"
+
+[environments.production]
+NEXT_PUBLIC_API_URL = "${{ BACKEND_URL }}"
+NEXT_PUBLIC_BACKEND_URL = "${{ BACKEND_URL }}"
